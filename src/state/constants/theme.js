@@ -1,0 +1,2 @@
+export const DARK_MODE_TOGGLE = 'DARK_MODE/TOGGLE';
+export const DARK_MODE_SET = 'DARK_MODE/SET';
