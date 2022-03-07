@@ -1,16 +1,12 @@
-import { DARK_MODE_SET, DARK_MODE_TOGGLE } from "../constants/theme";
+import { DARK_MODE_SET, DARK_MODE_TOGGLE, DARK_MODE_TOGGLE_REQUEST } from "../constants/theme";
 
 export const createDarkModeToggle = () => ({
   type: DARK_MODE_TOGGLE,
 });
 
-export const toggleWithDelay = () => {
-  return (dispatch) => {
-    setTimeout(() => {
-      dispatch(createDarkModeToggle());
-    }, 1000);
-  };
-};
+export const createDarkModeToggleRequest = () => ({
+  type: DARK_MODE_TOGGLE_REQUEST,
+});
 
 export const createDarkModeSet = (value) => ({
   type: DARK_MODE_SET,

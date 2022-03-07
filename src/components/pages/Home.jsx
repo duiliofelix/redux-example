@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '../atoms/Button';
 import MainContainer from '../atoms/MainContainer';
-import { createDarkModeToggle, toggleWithDelay } from '../../state/actions/theme';
+import { createDarkModeToggle, createDarkModeToggleRequest } from '../../state/actions/theme';
 import { darkModeSelector } from '../../state/selectors/theme';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const handleToggle = useCallback(() => dispatch(createDarkModeToggle()));
-  const handleDelayedToggle = useCallback(() => dispatch(toggleWithDelay()));
+  const handleDelayedToggle = useCallback(() => dispatch(createDarkModeToggleRequest()));
 
   return (
     <MainContainer darkMode={darkMode}>
