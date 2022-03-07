@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import logo from '../images/logo.svg';
-import { toggleWithDelay } from '../state/actions/theme';
+import { createDarkModeToggle } from '../state/actions/theme';
 import { darkModeSelector } from '../state/selectors/theme';
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
   const darkMode = useSelector(darkModeSelector);
   const dispatch = useDispatch();
 
-  const usaAcao = () => dispatch(toggleWithDelay());
+  const usaAcao = () => dispatch(createDarkModeToggle());
 
   return (
     <div className="App">

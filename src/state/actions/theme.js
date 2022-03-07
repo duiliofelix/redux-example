@@ -5,15 +5,11 @@ export const createDarkModeToggle = () => ({
 });
 
 export const toggleWithDelay = () => {
-
   return (dispatch) => {
     setTimeout(() => {
-      
-      dispatch(createDarkModeToggle);
-
+      dispatch(createDarkModeToggle());
     }, 1000);
   };
-
 };
 
 export const createDarkModeSet = (value) => ({
